@@ -14,4 +14,4 @@ I will be using what I have learned to create this website:
 4. links
 5. etc.
 
-[Visit the site at](isaiahdaiz.github.io/odin-recipes)
+[Visit the site at](https://isaiahdaiz.github.io/odin-recipes)

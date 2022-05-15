@@ -16,11 +16,38 @@ h1 {
 }
 
 .thumbnail {
+    position: relative;
     display: block;
     height: auto;
-    width: 300px;
     text-align: center;
     margin-left: auto;
+
+    height: auto;
+    width: 300px;
     margin-right: auto;
     padding: 10px;
+}
+
+.thumbnail .container a img{
+    width: 300px;
+}
+
+.thumbnail .container:hover {
+    opacity: 0.7;
+}
+
+#thumbnailText{
+    color: black;
+    position: absolute;
+    background-color:lightgrey;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#thumbnailText:visited {
+    color:inherit;
 }

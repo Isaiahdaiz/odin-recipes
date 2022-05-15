@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="=X-UACompatible" content="="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Recipes</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <!-- Top Banner -->
+        <section class="header" >
+            <div>
+                <img src="../images/chefsKiss.png" style="width: 75px; height: auto;">
+                <h1 style="display: inline-block;">Isaiah's Recipes</h1>
+            </div>
+            <a href="../index.html"><button>Home</button></a>
+        </section>
+
+        <!-- Recipes List -->
+        <p style="text-align: center;">This gallery showcases Isaiah's and Liz's creations (mostly Liz's)</p>
+        <div id="galleryFood" style="text-align: center;"></div>    
+    </body>
+    <script>
+
+        //Galery script
+
+        for (let i = 1; i < 16; i++){
+            var id = document.getElementById("galleryFood")
+            var tag = document.createElement("div");
+            var link = document.createElement('a');
+            var img = document.createElement('img');
+            var imgPath = "../images/gallery/n.JPG";
+
+            tag.className = "thumbnail";
+            tag.style = "Display: inline;"
+            img.width = 150;
+            //imgPath = setCharAt(imgPath,18,i);
+            imgPath = imgPath.replace(/n/g,i);
+            img.src = imgPath;
+            link.href = imgPath;
+            img.alt = "Gallery item " +i.toString();
+
+            id.appendChild(tag);
+            tag.appendChild(link);
+            link.appendChild(img);
+
+            console.log(imgPath)
+            console.log(imgPath[18])
+        }
+        // Find and replace Char Function in String
+        function setCharAt(str,index,chr){
+            if(index > str.length-1) return str;
+            return str.substring(0,index) + chr + str.substring(index+1);
+        }
+    </script>
+</html>
